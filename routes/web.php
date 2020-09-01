@@ -17,3 +17,6 @@ Route::get('/', 'HomeController@home');
 Route::get('/home', 'HomeController@home');
 //Blogs
 Route::get('/blogs/{blog_id}', 'BlogController@blog_detail');
+
+#Server
+Route::get('/admin', 'AdminController@login');

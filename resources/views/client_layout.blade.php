@@ -51,29 +51,13 @@
     </header>
 
     <!-- Page Features -->
-    <div class="row text-center">
+    <div class="row">
 
-     @foreach ($get_all_blog as $key => $blog)
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="{{URL::to('public/uploads/'.$blog->blogs_image)}}" alt="">
-          <div class="card-body">
-            <h4 class="card-title">{{$blog->blogs_name}}</h4>
-          <p class="card-text">{{ \Illuminate\Support\Str::limit($blog->blogs_title, 150, '...') }}</p>
-          </div>
-          <div class="card-footer">
-          <a href="{{URL::to('/blogs/'.$blog->blogs_id)}}" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>    
-      @endforeach
-
+      @yield('content')
+      
     </div>
-    <!-- /.row -->
-
-  </div>
   <!-- /.container -->
-
+  </div>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
